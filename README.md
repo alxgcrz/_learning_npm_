@@ -288,6 +288,12 @@ $ npm outdated
 
 # Mostrar las versiones no actualizadas a nivel global
 $ npm -g outdated
+
+# Actualiza las versiones manteniendo la política de semver
+$ npm update
+
+# Actualiza el número de versión en el package.json
+$ npm update --save
 ```
 
 Sin embargo podemos utilizar herramientas como [_npm-check-updates_](https://www.npmjs.com/package/npm-check-updates) o [_npm-check_](https://www.npmjs.com/package/npm-check):
