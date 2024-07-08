@@ -367,7 +367,7 @@ $ npm dedupe
 
 ---
 
-## Enlaces de interés
+## Referencias
 
 - <https://lenguajejs.com/npm/>
 - <https://www.freecodecamp.org/espanol/news/node-js-npm-tutorial/>
