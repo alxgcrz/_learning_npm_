@@ -311,7 +311,7 @@ $ ncu -g
 
 La actualización de dependencias tendrá en cuenta **la política de versionado semántico** de las dependencias.
 
-**NOTA:** Una vez actualizadas las dependencias del proyecto se **deben instalar** con `npm install`.
+> **NOTA:** Una vez actualizadas las dependencias del proyecto se **deben instalar** con `npm install`.
 
 #### Versionado semántico ('semver')
 
