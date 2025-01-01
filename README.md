@@ -36,7 +36,7 @@ La ventaja de utilizar **NVM** para instalar y gestionar **_NodeJS_** es que pod
 
 Además, al utilizar esta herramienta se evitan muchos problemas de permisos, sobretodo en sistemas GNU/Linux.
 
-### Instalar NVM
+### Instalación de NVM
 
 **NVM** tiene versiones para GNU/Linux y para Windows. Descargamos el fichero _.msi_ de la [web](https://github.com/coreybutler/nvm-windows/releases) y se instala como cualquier otro ejecutable de Windows.
 
@@ -64,6 +64,37 @@ $ nvm current
 
 # Cambiar de versión a otra versión instalada
 $ nvm use <version>
+```
+
+### Archivos .nvmrc
+
+Una forma muy efectiva de mantener versiones consistentes de Node.js dentro de un proyecto es utilizando archivos `.nvmrc`. Estos sencillos archivos de texto, colocados estratégicamente en la raíz del directorio del proyecto, **especifican la versión exacta de Node.js que se requiere**.
+
+Para crear este archivo, navegamos hasta el directorio raíz del proyecto y ejecutamos este comando en el terminal para crear el fichero y guardar la versión requerida de Node.js (en el ejemplo, la versión 18.16.0):
+
+```sh
+echo 18.16.10 > .nvmrc
+```
+
+Una vez que el archivo **.nvmrc** esté en su lugar, se puede cambiar fácilmente a la versión de Node.js especificada usando el comando `nvm use`. NVM detectará automáticamente el archivo **.nvmrc** y cambiará a la versión especificada:
+
+```sh
+$ nvm use
+
+# Found '/Users/**/.nvmrc' with version <v18.16.10>
+# Now using node v18.16.10 (npm v10.8.3)
+```
+
+Aunque los archivos **.nvmrc** son increíblemente efectivos, también es recomendable declarar explícitamente la versión requerida de Node.js en el archivo **package.json**. Esto proporciona una capa adicional de claridad y puede ser utilizado por diversas herramientas y servicios que dependen del archivo **package.json** para obtener información esencial.
+
+```json
+{
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "engines": {
+    "node": "18.16.0"
+  }
+}
 ```
 
 ## Uso de NPM
@@ -376,6 +407,7 @@ $ npm dedupe
 - <https://www.npmjs.com/package/npm-check-updates>
 - <https://github.com/coreybutler/nvm-windows>
 - <https://semver.org/lang/es/>
+- <https://dev.to/feliperocha93/ensuring-consistent-nodejs-versions-across-your-team-364d>
 
 ## Licencia
 
