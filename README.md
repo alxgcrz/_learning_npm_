@@ -398,16 +398,17 @@ $ npm dedupe
 
 ---
 
-## Referencias
+## Enlaces
 
-- <https://lenguajejs.com/npm/>
-- <https://www.freecodecamp.org/espanol/news/node-js-npm-tutorial/>
 - <https://www.npmjs.com/>
 - <https://www.npmjs.com/package/npx>
 - <https://www.npmjs.com/package/npm-check-updates>
-- <https://github.com/coreybutler/nvm-windows>
+- <https://lenguajejs.com/npm/>
+- <https://www.freecodecamp.org/espanol/news/node-js-npm-tutorial/>
 - <https://semver.org/lang/es/>
 - <https://dev.to/feliperocha93/ensuring-consistent-nodejs-versions-across-your-team-364d>
+- [Node Version Manager](https://github.com/nvm-sh/nvm)
+- [NVM for Windows](https://github.com/coreybutler/nvm-windows)
 
 ## Licencia
 
