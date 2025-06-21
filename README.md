@@ -40,7 +40,7 @@ Además, al utilizar esta herramienta se evitan muchos problemas de permisos, so
 
 **NVM** tiene versiones para GNU/Linux y para Windows. Descargamos el fichero _.msi_ de la [web](https://github.com/coreybutler/nvm-windows/releases) y se instala como cualquier otro ejecutable de Windows.
 
-> **NOTA:** Según se puede ver en la web de **[NVM-Windows](https://github.com/coreybutler/nvm-windows)**, su autor está trabajando en el sucesor de esta herramienta llamada _Runtime_.
+> **NOTA:** Según se puede ver en la web de **[NVM-Windows](https://github.com/coreybutler/nvm-windows)**, su autor está trabajando en el sucesor de esta herramienta llamada _**Runtime**_.
 
 ### Comandos de NVM
 
