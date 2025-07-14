@@ -400,6 +400,8 @@ $ npm dedupe
 
 ## Enlaces
 
+### NPM
+
 - <https://www.npmjs.com/>
 - <https://www.npmjs.com/package/npx>
 - <https://www.npmjs.com/package/npm-check-updates>
@@ -409,6 +411,18 @@ $ npm dedupe
 - <https://dev.to/feliperocha93/ensuring-consistent-nodejs-versions-across-your-team-364d>
 - [Node Version Manager](https://github.com/nvm-sh/nvm)
 - [NVM for Windows](https://github.com/coreybutler/nvm-windows)
+
+### Node.js
+
+- <https://nodejs.org/es>
+- <https://openjsf.org/>
+- <https://libuv.org/>
+- <https://v8.dev/>
+- <https://semver.org/lang/es/>
+
+### Misc
+
+- <https://developer.chrome.com/docs/devtools>
 
 ## Licencia
 
