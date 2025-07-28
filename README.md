@@ -231,15 +231,15 @@ $ npm install -D @vue/cli@4.4.6
 $ npm install -D @vue/cli@latest
 ```
 
-#### Comando 'npx'
+#### Comando `npx`
 
-Aunque hasta ahora hemos hablado de instalar paquetes de línea de comandos de forma global, también es posible instalarlos en el proyecto, y aquí es donde cobra vital importancia el comando `npx`.
+Hasta ahora hemos hablado de instalar paquetes de línea de comandos de forma global, pero también es posible instalarlos localmente en un proyecto. Aquí es donde cobra especial importancia el comando `npx`.
 
-Un problema que puede surgir es que si instalamos un paquete de linea de comandos a nivel de proyecto (y ya tenemos instalada otra versión más antigua en el sistema de forma global) tendrá preferencia esta última.
+Un problema común es que, si instalamos un paquete CLI (de línea de comandos) a nivel de proyecto, pero ya existe otra versión instalada globalmente en el sistema, puede que esta última tenga preferencia al ejecutarse. Esto ocurre porque el sistema busca primero en el PATH, donde suelen estar los paquetes globales.
 
-Es más, incluso si instalamos el paquete a nivel de proyecto solamente, es posible que al ejecutarlo el sistema no lo encuentre, ya que no está en el PATH del sistema, sino que está dentro de la carpeta `node_modules/.bin`.
+Además, incluso si el paquete está instalado solo localmente, es posible que el sistema no lo encuentre directamente al ejecutarlo, ya que no está en el PATH global, sino en la carpeta del proyecto `node_modules/.bin`.
 
-Para solucionar esto, podemos ejecutar comandos CLI instalados de forma local de la siguiente forma:
+Para solventar esto, podemos utilizar npx, que nos permite ejecutar comandos CLI instalados localmente de forma transparente:
 
 ```sh
 # Instalamos el paquete en el proyecto actual
@@ -251,9 +251,15 @@ $ npx gulp --version
 
 El comando `npx` hace lo siguiente:
 
-1) Busca si el paquete está instalado en `node_modules/.bin`. Si lo está, lo ejecuta.
-2) Si no está, lo buscará en el sistema (instalado de forma global). Si está, lo ejecuta.
-3) Si no lo encuentra, lo instalará temporalmente y lo ejecuta.
+1) Busca el ejecutable en `node_modules/.bin`. Si lo encuentra, lo ejecuta desde ahí.
+2) Si no lo encuentra localmente, busca una versión instalada globalmente.
+3) Si tampoco existe globalmente, puede descargar temporalmente el paquete desde el registro de npm, ejecutarlo y luego eliminarlo (esta funcionalidad era común en versiones antiguas de npx, pero se ha ido limitando en versiones modernas).
+
+> **NOTA:** En versiones modernas de npm (v7 en adelante), se recomienda usar `npm exec`, especialmente si se quiere un comportamiento más controlado y predecible.
+
+- <https://docs.npmjs.com/cli/v11/commands/npm-exec>
+
+- <https://docs.npmjs.com/cli/v11/commands/npx>
 
 #### Scripts NPM
 
@@ -403,6 +409,7 @@ $ npm dedupe
 ### NPM
 
 - <https://www.npmjs.com/>
+- <https://docs.npmjs.com/>
 - <https://www.npmjs.com/package/npx>
 - <https://www.npmjs.com/package/npm-check-updates>
 - <https://lenguajejs.com/npm/>
