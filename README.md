@@ -418,6 +418,7 @@ $ npm dedupe
 - <https://dev.to/feliperocha93/ensuring-consistent-nodejs-versions-across-your-team-364d>
 - [Node Version Manager](https://github.com/nvm-sh/nvm)
 - [NVM for Windows](https://github.com/coreybutler/nvm-windows)
+- [Volta](https://volta.sh/)
 
 ### Node.js
 
